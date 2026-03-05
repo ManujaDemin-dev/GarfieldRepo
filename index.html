@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="cartoon" id="cartoon">
+        <option value="Garfield">Garfield</option>
+        <option value="Odie">Odie</option>
+        <option value="Nermal">Nermal</option>
+        <option value="Jon">Jon</option>
+    </select>
+    <p style="color: crimson;">
+        try it out by clicking the dropdown menu and selecting a cartoon character. The corresponding image will be displayed based on your selection ;)
+    </p>
+
+    <!-- Use unique IDs for each image container -->
+    <div id="garfield-container">
+        <img src="https://i.pinimg.com/736x/16/55/0e/16550e96af922aaff35fa6c7c1580e0f.jpg" alt="Garfield" height="100" width="100" id="imgGar" style="display: none;">
+    </div>
+    <div id="odie-container">
+        <img src="https://i.pinimg.com/1200x/00/f7/54/00f7541535bdeef46656882e84398204.jpg" alt="Odie" height="100" width="100" id="imgOdie" style="display: none;">
+    </div>
+    <div id="nermal-container">
+        <img src="https://i.pinimg.com/736x/0a/38/3f/0a383f87edee5db5f8ab4ce6d3063555.jpg" alt="Nermal" height="100" width="100" id="imgNermal" style="display: none;">
+    </div>
+    <div id="jon-container">
+        <img src="https://i.pinimg.com/736x/47/45/87/474587a6a1611451af1a45d4471cb505.jpg" alt="Jon" height="100" width="100" id="imgJon" style="display: none;">
+    </div>
+
+    <script>
+    document.getElementById("cartoon").addEventListener("change", function() {
+        var selectedValue = this.value;
+        console.log("Selected cartoon: " + selectedValue);
+
+
+        document.getElementById("imgGar").style.display = "none";
+        document.getElementById("imgOdie").style.display = "none";
+        document.getElementById("imgNermal").style.display = "none";
+        document.getElementById("imgJon").style.display = "none";
+
+        // Show only the selected image
+        if (selectedValue === "Garfield") {
+            console.log("Garfield is selected");
+            document.getElementById("imgGar").style.display = "block";
+        } else if (selectedValue === "Odie") {
+            console.log("Odie is selected");
+            document.getElementById("imgOdie").style.display = "block";
+        } else if (selectedValue === "Nermal") {
+            console.log("Nermal is selected");
+            document.getElementById("imgNermal").style.display = "block";
+        } else if (selectedValue === "Jon") {
+            console.log("Jon is selected");
+            document.getElementById("imgJon").style.display = "block";
+        }
+    });
+
+
+    </script>
+</body>
+</html>

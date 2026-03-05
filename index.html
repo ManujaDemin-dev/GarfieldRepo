@@ -11,6 +11,9 @@
         <option value="Odie">Odie</option>
         <option value="Nermal">Nermal</option>
         <option value="Jon">Jon</option>
+        <option value="Ben">Ben10</option>
+        <option value="Gween">Gween</option>
+        <option value="Max">Max</option>
     </select>
     <p style="color: crimson;">
         try it out by clicking the dropdown menu and selecting a cartoon character. The corresponding image will be displayed based on your selection ;)
@@ -28,6 +31,15 @@
     </div>
     <div id="jon-container">
         <img src="https://i.pinimg.com/736x/47/45/87/474587a6a1611451af1a45d4471cb505.jpg" alt="Jon" height="100" width="100" id="imgJon" style="display: none;">
+    </div>
+    <div id="ben-container">
+        <img src="https://i.pinimg.com/1200x/bd/5d/94/bd5d948d4ff1d3427b572bb0f168dd9e.jpg" alt="Ben" height="100" width="100" id="imgBen" style="display: none;">
+    </div>
+    <div id="Gween-container">
+        <img src="https://i.pinimg.com/736x/1c/6a/c0/1c6ac0495ea8ae2e61b578fc0190e567.jpg" alt="Gween" height="100" width="100" id="imgGween" style="display: none;">
+    </div>
+    <div id="max-container">
+        <img src="https://i.pinimg.com/736x/61/a6/86/61a6860ececd6ae6359f01e65f423a1d.jpg" alt="Max" height="100" width="100" id="imgMax" style="display: none;">
     </div>
 
     <script>
@@ -54,6 +66,15 @@
         } else if (selectedValue === "Jon") {
             console.log("Jon is selected");
             document.getElementById("imgJon").style.display = "block";
+        } else if (selectedValue === "Ben") {
+            console.log("Ben is selected");
+            document.getElementById("imgBen").style.display = "block";
+        } else if (selectedValue === "Gween") {
+            console.log("Gween is selected");
+            document.getElementById("imgGween").style.display = "block";
+        } else if (selectedValue === "Max") {
+            console.log("Max is selected");
+            document.getElementById("imgMax").style.display = "block";
         }
     });
 
